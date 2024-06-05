@@ -205,19 +205,17 @@ const ExerciseFeedback = ({ selectedExercise }) => {
       setInCorrectForm(false);
       setFeedback('');
     }
-  };
-
-  return (
-    <div>
-      <Webcam ref={webcamRef} style={{ display: 'none' }} />
-      <canvas ref={canvasRef} style={{ width: '640px', height: '480px' }} />
-      <div style={{ marginTop: '20px', fontSize: '20px', color: '#ff0000' }}>
-        <div className="popup">{feedback}</div>
-        <div>{positionMessage}</div>
-        <div>Count: {exerciseCount}</div>
+    
+    return (
+      <div>
+        <Webcam ref={webcamRef} style={{ display: 'none' }} />
+        <canvas ref={canvasRef} style={{ width: '640px', height: '480px' }} />
+        <div style={{ marginTop: '20px', fontSize: '20px', color: '#ff0000' }}>
+          <div className="popup">{feedback}</div>
+          <div>{positionMessage}</div>
+          <div>Count: {exerciseCount}</div>
+        </div>
       </div>
-    </div>
-  );
-};
-
-export default ExerciseFeedback;
+    );
+  }
+}    
